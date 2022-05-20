@@ -1,0 +1,12 @@
+# bat is a better cat
+brew "bat"
+# chezmoi for dotfile management
+brew "chezmoi"
+# fd for easier filename searching
+brew "fd"
+# fzf for fuzzy file selection
+brew "fzf"
+# ripgrep for searching
+brew "ripgrep"
+# zoxide for quick directory switching
+brew "zoxide"
