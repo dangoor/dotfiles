@@ -1,8 +1,5 @@
-eval $(/opt/homebrew/bin/brew shellenv)
-
 export EDITOR="code -w"
 
 export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
 
-eval $(direnv hook zsh)
-source .fzf.zsh
+source ~/.fzf.zsh
