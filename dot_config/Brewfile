@@ -2,10 +2,14 @@
 brew "bat"
 # chezmoi for dotfile management
 brew "chezmoi"
+# direnv to manage environment variables locally
+brew "direnv"
 # fd for easier filename searching
 brew "fd"
 # fzf for fuzzy file selection
 brew "fzf"
+# python no longer included with macOS
+brew "python3"
 # ripgrep for searching
 brew "ripgrep"
 # zoxide for quick directory switching
