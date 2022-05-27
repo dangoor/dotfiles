@@ -105,3 +105,4 @@ export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
 
 source ~/.fzf.zsh
 
+source ~/.config/scmpuff.zsh
