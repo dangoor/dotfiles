@@ -14,5 +14,7 @@ brew "git"
 brew "python3"
 # ripgrep for searching
 brew "ripgrep"
+# scmpuff enhances some git commands
+brew "scmpuff"
 # zoxide for quick directory switching
 brew "zoxide"
