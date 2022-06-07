@@ -8,6 +8,8 @@ brew "direnv"
 brew "fd"
 # fzf for fuzzy file selection
 brew "fzf"
+# fzy for fuzzy file selection (that matches GitHub)
+brew "fzy"
 # git to get the latest
 brew "git"
 # python no longer included with macOS
