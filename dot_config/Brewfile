@@ -18,3 +18,6 @@ brew "ripgrep"
 brew "scmpuff"
 # zoxide for quick directory switching
 brew "zoxide"
+
+# rocket for easy emoji typing outside of Slack
+cask "rocket"
