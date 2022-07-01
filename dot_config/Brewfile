@@ -10,6 +10,8 @@ brew "fd"
 brew "fzf"
 # fzy for fuzzy file selection (that matches GitHub)
 brew "fzy"
+# gh GitHub command line interface
+brew "gh"
 # git to get the latest
 brew "git"
 # python no longer included with macOS
