@@ -14,8 +14,10 @@ brew "fzy"
 brew "gh"
 # git to get the latest
 brew "git"
+{{- if eq .chezmoi.os "darwin" }}
 # python no longer included with macOS
 brew "python3"
+{{- end }}
 # ripgrep for searching
 brew "ripgrep"
 # scmpuff enhances some git commands
@@ -23,5 +25,7 @@ brew "scmpuff"
 # zoxide for quick directory switching
 brew "zoxide"
 
+{{- if eq .chezmoi.os "darwin" }}
 # rocket for easy emoji typing outside of Slack
 cask "rocket"
+{{- end }}
