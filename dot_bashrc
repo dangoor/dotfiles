@@ -3,3 +3,5 @@ export EDITOR="code -w"
 source ~/.fzf.bash
 
 eval "$(direnv hook bash)"
+
+export PATH="$PATH:$HOME/go/bin"
