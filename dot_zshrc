@@ -80,7 +80,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$PATH:$HOME/go/bin
+# Prefer our sqlite
+export PATH=/opt/homebrew/opt/sqlite/bin:$PATH:$HOME/go/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
