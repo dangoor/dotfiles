@@ -5,3 +5,7 @@ source ~/.fzf.bash
 eval "$(direnv hook bash)"
 
 export PATH="$PATH:$HOME/go/bin"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/dangoor/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)%
