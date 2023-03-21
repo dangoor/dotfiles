@@ -113,3 +113,7 @@ export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
 source ~/.fzf.zsh
 
 source ~/.config/scmpuff.zsh
+
+alias '??'='github-copilot-cli what-the-shell'
+alias 'git?'='github-copilot-cli git-assist'
+alias 'gh?'='github-copilot-cli gh-assist'
