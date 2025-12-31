@@ -16,8 +16,13 @@ if [ "$(uname)" = "Darwin" ]; then
 elif [ -f /etc/debian_version ] || which apt-get &>/dev/null; then
   # Debian/Ubuntu/Codespaces
   echo "Installing chezmoi via apt..."
-  sudo apt-get update
-  sudo apt-get install -y chezmoi
+  
+  # Add chezmoi PPA or use snap/binary install
+  # Option 1: Use the official binary installer
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/.local/bin
+  
+  # Make sure ~/.local/bin is in PATH
+  export PATH="$HOME/.local/bin:$PATH"
   
 else
   echo "Unsupported OS. Please install chezmoi manually."
