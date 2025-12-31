@@ -1,4 +1,4 @@
-export EDITOR="code -w"
+export EDITOR="code-insiders -w"
 
 source ~/.fzf.bash
 

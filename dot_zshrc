@@ -75,6 +75,16 @@ plugins=(direnv git zoxide)
 # chezmoi is handling updates of oh-my-zsh, so I disable the auto update
 # feature of oh-my-zsh.
 DISABLE_AUTO_UPDATE="true"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
+
+# Smarter completion initialization
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,7 +116,7 @@ export PATH=/opt/homebrew/opt/sqlite/bin:$PATH:$HOME/go/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR="code -w"
+export EDITOR="code-insiders -w"
 
 export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
 
@@ -114,6 +124,7 @@ source ~/.fzf.zsh
 
 source ~/.config/scmpuff.zsh
 
-alias '??'='github-copilot-cli what-the-shell'
-alias 'git?'='github-copilot-cli git-assist'
-alias 'gh?'='github-copilot-cli gh-assist'
+# if ~/.extra.env exists, source it
+if [ -f ~/.extra.env ]; then
+    source ~/.extra.env
+fi
