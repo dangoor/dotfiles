@@ -23,7 +23,6 @@ packages:
     ensure:
       apt:
         - bat
-        - chezmoi
         - fd
         - gh
         - mise
