@@ -1,0 +1,21 @@
+packages:
+  darwin:
+    tap:
+      - homebrew/bundle
+      - homebrew/services
+    ensure:
+      brew:
+        - bat
+        - chezmoi
+        - fd
+        - gh
+        - git
+        - go
+        - mise
+        - python3
+        - ripgrep
+        - scmpuff
+        - sqlite3
+        - zoxide
+      cask:
+        - rocket
