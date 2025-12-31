@@ -19,3 +19,14 @@ packages:
         - zoxide
       cask:
         - rocket
+  linux:
+    ensure:
+      apt:
+        - bat
+        - chezmoi
+        - fd
+        - gh
+        - mise
+        - ripgrep
+        - scmpuff
+        - zoxide

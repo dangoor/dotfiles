@@ -1,0 +1,22 @@
+#!/bin/bash
+
+{{- if .codespaces }}
+set -e
+
+echo "Installing packages for Codespaces..."
+
+# Update package list
+sudo apt-get update
+
+# Install packages
+{{- if .packages.linux }}
+{{- range .packages.linux.apt }}
+sudo apt-get install -y {{ . }}
+{{- end }}
+{{- end }}
+
+echo "Package installation complete."
+
+{{- else }}
+echo "Not running in Codespaces, skipping Linux package installation."
+{{- end }}
