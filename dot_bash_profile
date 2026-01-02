@@ -9,7 +9,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(zoxide init bash)"
 eval "$(scmpuff init -s)"
 
-
+eval "$(/home/codespace/.local/bin/mise activate bash)"
 
 # If the shell is interactive and .bashrc exists, get the aliases and functions
 if [[ $- == *i* && -f ~/.bashrc ]]; then

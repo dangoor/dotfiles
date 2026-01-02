@@ -122,7 +122,9 @@ export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
 
 source ~/.fzf.zsh
 
-source ~/.config/scmpuff.zsh
+eval "$(scmpuff init -s)"
+
+eval "$(/home/codespace/.local/bin/mise activate zsh)"
 
 # if ~/.extra.env exists, source it
 if [ -f ~/.extra.env ]; then

@@ -5,15 +5,25 @@ set -e
 
 echo "Installing packages for Codespaces..."
 
-# Update package list
-sudo apt-get update
+# Install apt packages
+sudo apt-get install -y bat fd-find ripgrep zoxide
 
-# Install packages
-{{- if .packages.linux }}
-{{- range .packages.linux.ensure.apt }}
-sudo apt-get install -y {{ . }}
-{{- end }}
-{{- end }}
+# Install scmpuff from GitHub releases
+SCMPUFF_VERSION="v0.6.0"
+SCMPUFF_ARCH="linux_amd64"
+SCMPUFF_URL="https://github.com/mroth/scmpuff/releases/download/${SCMPUFF_VERSION}/scmpuff_${SCMPUFF_VERSION:1}_${SCMPUFF_ARCH}.tar.gz"
+
+echo "Installing scmpuff ${SCMPUFF_VERSION}..."
+cd /tmp
+curl -fsSL "${SCMPUFF_URL}" -o scmpuff.tar.gz
+tar -xzf scmpuff.tar.gz
+sudo mv scmpuff /usr/local/bin/
+sudo chmod +x /usr/local/bin/scmpuff
+rm scmpuff.tar.gz
+cd -
+
+echo "Installing: mise..."
+curl "https://mise.run" | sh
 
 echo "Package installation complete."
 

@@ -27,5 +27,4 @@ packages:
         - gh
         - mise
         - ripgrep
-        - scmpuff
         - zoxide
