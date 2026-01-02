@@ -1,9 +1,3 @@
-HISTCONTROL=ignoreboth
-
-export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 eval "$(zoxide init bash)"
 eval "$(scmpuff init -s=bash)"
 
