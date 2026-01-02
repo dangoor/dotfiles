@@ -120,9 +120,9 @@ export EDITOR="code-insiders -w"
 
 export HOMEBREW_BUNDLE_FILE=~/.config/Brewfile
 
-source ~/.fzf.zsh
+source <(fzf --zsh)
 
-eval "$(scmpuff init -s)"
+eval "$(scmpuff init -s=zsh)"
 
 eval "$(/home/codespace/.local/bin/mise activate zsh)"
 

@@ -1,5 +1,5 @@
 export EDITOR="code-insiders -w"
 
-source ~/.fzf.bash
+eval "$(fzf --bash)"
 
 export PATH="$PATH:$HOME/go/bin"
