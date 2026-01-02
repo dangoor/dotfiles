@@ -23,7 +23,7 @@ packages:
     ensure:
       apt:
         - bat
-        - fd
+        - fd-find
         - gh
         - mise
         - ripgrep
