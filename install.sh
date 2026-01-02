@@ -12,7 +12,7 @@ if [ "$(uname)" = "Darwin" ]; then
   
   echo "Installing chezmoi via Homebrew..."
   brew install chezmoi
-  
+  chezmoi=$(command -v chezmoi)
 elif [ -f /etc/debian_version ] || which apt-get &>/dev/null; then
   # Debian/Ubuntu/Codespaces
   echo "Installing chezmoi via apt..."
@@ -23,7 +23,7 @@ elif [ -f /etc/debian_version ] || which apt-get &>/dev/null; then
   
   # Make sure ~/.local/bin is in PATH
   export PATH="$HOME/.local/bin:$PATH"
-  
+  chezmoi=$(command -v chezmoi)
 else
   echo "Unsupported OS. Please install chezmoi manually."
   exit 1
