@@ -7,7 +7,20 @@ echo "Installing packages for Codespaces..."
 
 # Install apt packages
 
-sudo apt update && sudo apt-get install -y bat fd-find fzf ripgrep zoxide
+sudo apt update && sudo apt-get install -y bat fd-find ripgrep zoxide
+
+# Install fzf from GitHub releases
+FZF_VERSION="0.67.0"
+FZF_URL="https://github.com/junegunn/fzf/releases/download/${FZF_VERSION}/fzf-${FZF_VERSION}-linux_amd64.tar.gz"
+
+echo "Installing fzf ${FZF_VERSION}..."
+cd /tmp
+curl -fsSL "${FZF_URL}" -o fzf.tar.gz
+tar -xzf fzf.tar.gz
+sudo mv fzf /usr/local/bin/
+sudo chmod +x /usr/local/bin/fzf
+rm fzf.tar.gz
+cd -
 
 # Install scmpuff from GitHub releases
 SCMPUFF_VERSION="v0.6.0"
