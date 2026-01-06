@@ -7,7 +7,7 @@ echo "Installing packages for Codespaces..."
 
 # Install apt packages
 
-sudo apt update && sudo apt-get install -y bat fd-find ripgrep zoxide
+sudo apt update && sudo apt-get install -y bat fd-find ripgrep
 
 # Install fzf from GitHub releases
 FZF_VERSION="0.67.0"
@@ -35,6 +35,10 @@ sudo mv scmpuff /usr/local/bin/
 sudo chmod +x /usr/local/bin/scmpuff
 rm scmpuff.tar.gz
 cd -
+
+# Install zoxide
+echo "Installing zoxide..."
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 echo "Installing: mise..."
 curl "https://mise.run" | sh
