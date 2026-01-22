@@ -1,5 +1,10 @@
 export EDITOR="code-insiders -w"
 
+eval "$(zoxide init bash)"
+eval "$(scmpuff init -s=bash)"
+eval "$(/home/codespace/.local/bin/mise activate bash)"
 eval "$(fzf --bash)"
+mise use -g atuin@latest
+eval "$(atuin init bash)"
 
 export PATH="$PATH:$HOME/go/bin"

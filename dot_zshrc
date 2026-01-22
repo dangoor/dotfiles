@@ -124,7 +124,10 @@ source <(fzf --zsh)
 
 eval "$(scmpuff init -s=zsh)"
 
-eval "$(/home/codespace/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
+
+mise use -g atuin@latest
+eval "$(atuin init zsh)"
 
 # if ~/.extra.env exists, source it
 if [ -f ~/.extra.env ]; then
